@@ -30,7 +30,6 @@ def test_bci2000_to_mefd(test_file_bci2000_stim):
     assert 'state_ImplantLostSample' in rdr.channels, "ImplantLostSample channel should be present"
 
 
-
 def test_bci2000_acc_to_mefd(test_file_bci2000_accl):
     fid_bci2000, tmpdir = test_file_bci2000_accl
 

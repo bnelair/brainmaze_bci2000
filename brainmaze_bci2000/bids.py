@@ -12,6 +12,29 @@ from BCI2kReader import BCI2kReader as b2k
 from brainmaze_bci2000.bci2000 import BCI2000Reader
 
 def bci2000_to_mefd(path_bci: str, path_mefd: str =None):
+    """
+    Converts a BCI2000 `.dat` file to a MEF (Multiscale Electrophysiology Format) directory.
+
+    This function reads data from a BCI2000 `.dat` file, processes it, and writes the data
+    into a MEF directory format. The output includes EEG data, accelerometer data (if available),
+    state variables, and metadata such as sampling rate, amplification factor, and stimulus annotations.
+
+    Args:
+        path_bci (str): Path to the input BCI2000 `.dat` file. Must be a valid file path.
+        path_mefd (str, optional): Path to the output MEF directory. If not provided,
+            the output path will be derived from the input file by replacing the `.dat`
+            extension with `.mefd`.
+
+    Raises:
+        ValueError: If the input file does not have a `.dat` extension.
+        TypeError: If the input path is not a string.
+        FileNotFoundError: If the input file does not exist or is inaccessible.
+
+    Returns:
+        None: The function writes the output to the specified MEF directory and does not return any value.
+    """
+
+
     write_states = [
         'ImplantLostSample',
         'ImplantStimulation',

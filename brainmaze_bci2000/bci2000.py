@@ -5,6 +5,61 @@ from datetime import datetime
 from BCI2kReader import BCI2kReader as b2k
 
 class BCI2000Reader:
+    """
+    A class to read and process BCI2000 `.dat` files.
+
+    This class provides methods and properties to extract EEG data, accelerometer data,
+    state variables, and metadata from BCI2000 files. It validates the input file,
+    parses its contents, and exposes the data in a structured format.
+
+    Attributes:
+        _accl_channels (list): List of accelerometer channel names.
+        _amplification_factor_values (dict): Mapping of amplification factor codes to their descriptions.
+
+    Methods:
+        __init__(path_bci_file):
+            Initializes the reader, validates the input file, and loads its data.
+
+        fs:
+            Returns the sampling rate of the recording.
+
+        reference_channels:
+            Returns the list of reference channels used in the recording.
+
+        start_time:
+            Returns the start time of the recording as a UNIX timestamp.
+
+        stimulation:
+            Returns stimulation parameters if stimulation is enabled, otherwise an empty dictionary.
+
+        data_accelerometry:
+            Returns accelerometer data if available, otherwise `None`.
+
+        channels:
+            Returns the list of channel names in the recording.
+
+        data_eeg:
+            Returns EEG data as a dictionary with channel names as keys.
+
+        amplification_factor:
+            Returns the amplification factor used in the recording.
+
+        recording_duration_seconds:
+            Returns the duration of the recording in seconds.
+
+        states:
+            Returns the list of state variable names in the recording.
+
+        get_state(state_name):
+            Returns the data for a specific state variable.
+
+    Raises:
+        ValueError: If the input file is not a `.dat` file or a requested state does not exist.
+        TypeError: If the input file path is not a string.
+        FileNotFoundError: If the input file does not exist or is inaccessible.
+        RuntimeError: If an error occurs while reading the BCI2000 file.
+    """
+
     _accl_channels = [
         'MTw1X',
         'MTw1Y',
