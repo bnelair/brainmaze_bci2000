@@ -1,4 +1,4 @@
-# BNEL - Codes for CorTec and BCI2000
+# BrainMaze - Codes for CorTec and BCI2000
 
 ## Installation
 
@@ -7,7 +7,7 @@ pip install --force git+https://github.com/bnelair/brainmaze_bci2000.git@dev
 ```
 
 ## License
-This software is licensed under BSD-3Clause license. For details see the `LICENSE <https://github.com/bnelair/brainmaze_utils/blob/master/LICENSE>`_ file in the root directory of this project.
+This software is licensed under BSD-3Clause license. For details see the [LICENSE](https://github.com/bnelair/brainmaze_bci2000/blob/master/LICENSE) file in the root directory of this project.
 
 
 ## Acknowledgment
@@ -28,3 +28,4 @@ We appreciate you citing these papers when utilizing this toolbox in further res
 
 - Schalk, Gerwin, Samuel Worrell, Filip Mivalt, Alexander Belsten, Inyong Kim, Jonathan M. Morris, Dora Hermes, et al. 2022. “Toward a Fully Implantable Ecosystem for Adaptive Neuromodulation in Humans: Preliminary Experience with the CorTec BrainInterchange Device in a Canine Model.” Frontiers in Neuroscience 16 (December): 932782.
 
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
