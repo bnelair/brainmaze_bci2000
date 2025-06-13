@@ -57,10 +57,10 @@ def test_bci2000_acc_to_mefd(test_file_bci2000_accl):
 def test_sourcedata_convertion(tmp_dir):
 
     # path = '/Volumes/MILLER/SHARED/CorTec/Data_BIDS/BIDS_BCI2000_CortecInterchange_v2.5.0/sourcedata/sub-c03'
-    path = '/Users/mivalt.filip/Data/CorTec/CorTec_tmp'
-    tmp_dir = '/Users/mivalt.filip/Data/CorTec/BIDS_BCI2000_CortecInterchange_v2.1.0'
-
-    convert_sourcedata_bci2000_to_bids(path, tmp_dir)
+    # path = '/Users/mivalt.filip/Data/CorTec/CorTec_tmp'
+    # tmp_dir = '/Users/mivalt.filip/Data/CorTec/BIDS_BCI2000_CortecInterchange_v2.1.0'
+    #
+    # convert_sourcedata_bci2000_to_bids(path, tmp_dir)
 
     pass
 
