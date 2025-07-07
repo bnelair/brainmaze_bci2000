@@ -122,13 +122,27 @@ class BCI2000Reader:
         stim_pulsewidth = float(self._params['StimulationPulses'][2][0])
         stim_frequency = 5*float(self._params['StimulationPulses'][1][0]) + 2*float(self._params['StimulationPulses'][3][0]) + float(self._params['StimulationPulses'][4][0])
         stim_frequency = 1 / (stim_frequency / 1000)
+        # print("\nanodes", self._params['StimulationTriggers'][2], 'cathodes', self._params['StimulationTriggers'][3])
+
+        anodes_list = self._params['StimulationTriggers'][2][0]
+        cathodes_list = self._params['StimulationTriggers'][3][0]
+
+        if anodes_list == '{':
+            anodes_list = self._params['StimulationTriggers'][4][0]
+            cathodes_list = self._params['StimulationTriggers'][5][0]
+
+        anodes_list = [int(i)-1 for i in anodes_list.split(',')]
+        cathodes_list = [int(i)-1 for i in cathodes_list.split(',')]
+
+        anodes = [self.channels[i] for i in anodes_list]
+        cathodes = [self.channels[i] for i in cathodes_list]
 
         return {
             'amplitude_mA': stim_amplitude_mA,
             'frequency_Hz': stim_frequency,
             'pulsewidth_us': stim_pulsewidth,
-            'stim_anode': self.channels[int(self._params['StimulationTriggers'][2][0])],
-            'stim_cathode': self.channels[int(self._params['StimulationTriggers'][3][0])],
+            'stim_anode': anodes,
+            'stim_cathode': cathodes,
         }
 
     @property
@@ -158,6 +172,9 @@ class BCI2000Reader:
 
     @property
     def amplification_factor(self):
+        if not 'AmplificationFactor' in self._params:
+            return 'n/a'
+
         return self._amplification_factor_values[self._params['AmplificationFactor']]
 
     @property

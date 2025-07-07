@@ -5,9 +5,9 @@ import tempfile
 
 from mef_tools import MefReader
 
-from brainmaze_bci2000.bids import bci2000_to_mefd
+from brainmaze_bci2000.bids import bci2000_to_mefd, convert_sourcedata_bci2000_to_bids
 
-from .conftest import test_file_bci2000_stim, test_file_bci2000_accl
+from .conftest import test_file_bci2000_stim, test_file_bci2000_accl, tmp_dir
 
 def test_bci2000_to_mefd(test_file_bci2000_stim):
     fid_bci2000, tmpdir = test_file_bci2000_stim
@@ -53,4 +53,14 @@ def test_bci2000_acc_to_mefd(test_file_bci2000_accl):
     for ach in ['accl_MTw1X', 'accl_MTw1Y', 'accl_MTw1Z']:
         assert ach in rdr.channels, f"Accelerometer channel {ach} should be present"
 
+
+def test_sourcedata_convertion(tmp_dir):
+
+    # path = '/Volumes/MILLER/SHARED/CorTec/Data_BIDS/BIDS_BCI2000_CortecInterchange_v2.5.0/sourcedata/sub-c03'
+    # path = '/Users/mivalt.filip/Data/CorTec/CorTec_tmp'
+    # tmp_dir = '/Users/mivalt.filip/Data/CorTec/BIDS_BCI2000_CortecInterchange_v2.1.0'
+    #
+    # convert_sourcedata_bci2000_to_bids(path, tmp_dir)
+
+    pass
 

@@ -1,5 +1,7 @@
 # BrainMaze - Codes for CorTec and BCI2000
 
+Tools for converting BCI2000 data to BrainMaze format using [Mef3 format ](https://github.com/bnelair/mef_tools).
+
 ## Installation
 
 ```bash
@@ -29,3 +31,9 @@ We appreciate you citing these papers when utilizing this toolbox in further res
 - Schalk, Gerwin, Samuel Worrell, Filip Mivalt, Alexander Belsten, Inyong Kim, Jonathan M. Morris, Dora Hermes, et al. 2022. “Toward a Fully Implantable Ecosystem for Adaptive Neuromodulation in Humans: Preliminary Experience with the CorTec BrainInterchange Device in a Canine Model.” Frontiers in Neuroscience 16 (December): 932782.
 
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+
+
+
+
+
+
