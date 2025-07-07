@@ -1,5 +1,6 @@
 # BrainMaze - Codes for CorTec and BCI2000
 
+
 Tools for converting BCI2000 data to [BIDS](https://bids.neuroimaging.io/). Currently supports conversion between CorTec and BIDS using [Mef3 format ](https://github.com/bnelair/mef_tools).
 
 ## Installation
