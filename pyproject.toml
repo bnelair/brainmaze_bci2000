@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 # 2. Project Metadata (PEP 621)
 # This section replaces most of what was in your setup() call.
 [project]
-name = "bnel_cortec"
+name = "brainmaze_bci2000"
 dynamic = ["version", "dependencies"]
 description = "BrainMaze tools for handling BCI2000 Data"
 readme = "README.md" # Specifies the README file and its format
