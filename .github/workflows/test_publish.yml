@@ -64,7 +64,7 @@ jobs:
 
     - name: Print package version
       run:
-        python -c "import brainmaze_torch; print(brainmaze_torch.__version__)"
+        python -c "import brainmaze_bci2000; print(brainmaze_bci2000.__version__)"
 
     - name: Test package
       run:
